@@ -12,7 +12,7 @@ public class Grammer {
 
     public static String BULLET            = "(?:[*+-]|\\d+\\.)";
     public static String COMMENT           = "<!--[\\s\\S]*?-->";
-    public static String TAG               = "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b)\\w+(?!:/|[^\\w\\s@]*@)\\b";
+    public static String TAG               = "(?!(?:a|em|strong|small|s|cite|q|dfn|abbr|data|time|code|var|samp|kbd|sub|sup|i|b|u|mark|ruby|rt|rp|bdi|bdo|span|br|wbr|ins|del|img)\\b|details|summary)\\w+(?!:/|[^\\w\\s@]*@)\\b";
     public static String CLOSED            = "<(" + TAG + ")[\\s\\S]+?<\\/\\1>";
     public static String CLOSING           = "<" + TAG + "(?:\"[^\"]*\"|'[^']*'|[^'\">])*?>";
     public static String HR                = "\\n+(?=\\1?(?:[-*_] *){3,}(?:\\n+|$))";

@@ -204,6 +204,22 @@ public class MarkedTest {
                         "</table>\n", result);
     }
 
+    @Test
+    public void testDetailsTag() throws Exception {
+        String result = Marked.marked(
+		"<details>\n" +
+		"<summary>sample title<summary>\n" +
+		"long long text\n" +
+		"</details>\n");
+
+	assertEquals(
+		"<p><details>\n" +
+		"<summary>sample title<summary>\n" +
+		"long long text\n" +
+		"</details></p>\n",
+		result);
+    }
+
     private String loadResourceAsString(String path) throws IOException {
         InputStream in = Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
         try {
